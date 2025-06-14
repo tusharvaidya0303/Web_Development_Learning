@@ -6,24 +6,35 @@
     <title>Table</title>
 </head>
 <body>
-    <table>
-        <Caption>Food Chart</Caption>
-        <tr>
-            <th>Food</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Fruti</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Samosa</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>Chips</td>
-            <td>20</td>
-        </tr>
+    <table border="Black">
+        <Caption border="Black">Food Chart</Caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Food</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th>IND</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fruti</td>
+                <td>10</td>
+                <td>0.14</td>
+            </tr>
+            <tr>
+                <td>Samosa</td>
+                <td>12</td>
+                <td>0.17</td>
+            </tr>
+            <tr>
+                <td>Chips</td>
+                <td>20</td>
+                <td>0.28</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
