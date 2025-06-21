@@ -1,5 +1,13 @@
 div {
-    height: 200;
+  height: 150px;
+  width: 500px;
+  background-color: pink;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+}
+h1{
+    height: 150;
     width: 500;
-    margin: 100;
+    
 }
