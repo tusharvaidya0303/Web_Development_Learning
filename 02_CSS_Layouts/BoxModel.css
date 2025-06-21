@@ -8,15 +8,21 @@ div {
   border-top: 3px dashed red;
   border-radius: 10px;
   padding-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 25px;
 }
 h1{
-    height: 150;
-    width: 500;
     /* border-width: 5px;
     border-style: dashed;
     border-color: gray; */
     border: 5px dashed gray;
+    margin: 0;
 }
 button{
-    
+    border: 2px solid black;
+    background-color: red;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 20px 30px;
+
 }
