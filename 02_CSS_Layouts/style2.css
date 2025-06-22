@@ -16,3 +16,6 @@
   border-radius: 50px;
   margin: 20px;
 }
+#list{
+    display: inline;
+}
