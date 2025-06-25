@@ -4,9 +4,17 @@
   margin: 40px auto;
   background-color: azure;
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+h1{
+    text-align: center;
 }
 #container div {
   height: 100px;
-  width: 100px;
+  width: 200px;
   border: 2px solid white;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
 }
