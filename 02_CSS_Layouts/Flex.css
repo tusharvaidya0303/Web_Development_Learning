@@ -6,6 +6,7 @@
   border: 2px solid black;
   display: flex;
   flex-direction: row-reverse;
+  /* flex-direction: column-reverse; */
 }
 h1{
     text-align: center;
