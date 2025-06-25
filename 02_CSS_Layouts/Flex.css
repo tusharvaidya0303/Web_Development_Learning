@@ -1,9 +1,12 @@
-#container{
-    height: 400px;
-    width: 80%;
-    margin: 40px auto;
-    background-color: antiquewhite;
+#container {
+  height: 400px;
+  width: 80%;
+  margin: 40px auto;
+  background-color: azure;
+  border: 2px solid black;
 }
-#container div{
-    
+#container div {
+  height: 100px;
+  width: 100px;
+  border: 2px solid white;
 }
