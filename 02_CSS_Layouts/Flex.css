@@ -1,5 +1,9 @@
-#contaner{
-    height: 800px;
+#container{
+    height: 400px;
     width: 80%;
-    background-color: bisque;
+    margin: 40px auto;
+    background-color: antiquewhite;
+}
+#container div{
+    
 }
