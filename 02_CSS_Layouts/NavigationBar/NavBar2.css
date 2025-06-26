@@ -13,4 +13,8 @@
     width: 80px;
     font-size: 24px;
     line-height: 50px;
+    margin-left: 10px;
+}
+.box a{
+    text-decoration: none;
 }
