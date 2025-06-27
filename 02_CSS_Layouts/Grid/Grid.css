@@ -1,14 +1,22 @@
 .container{
     height: 400px;
     width: 600px;
-    background-color: black;
-    border: 2px solid white;
+    background-color: grey;
+    border: 2px solid black;
     display: grid;
-}
+    /* grid-template-rows: 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px; */
+
+    grid-template-rows: repeat(4 ,1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    /* grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(1fr 1fr 1fr 1fr); */
+
+}   
 .box{
     width: 100px;
     height: 60px;
     background-color: greenyellow;
-    border: 2px solid white;
     text-align: center;
 }
