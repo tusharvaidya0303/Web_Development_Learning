@@ -1,5 +1,26 @@
-.box{
-    width: 300px;
-    height: 100px;
+.box {
+  width: 300px;
+  height: 100px;
+  background-color: pink;
+
+  animation-name: animation;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animation {
+  from {
+    width: 10px;
     background-color: pink;
+    font-size: 0px;
+  }
+  to {
+    width: 450px;
+    background-color: palevioletred;
+    font-size: 80px;
+    border-radius: 15px;
+  }
 }
