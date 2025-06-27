@@ -2,13 +2,16 @@
     height: 400px;
     width: 600px;
     background-color: yellow;
-    display: grid;
+    display: inline-grid;
     grid-template-rows: 80px 80px 80px 80px;
     grid-template-columns: 80px 80px 80px 80px;
     /* row-gap: 20px;
     column-gap: 30px; */
     grid-gap: 20px 30px;
 
+    /* justify-content: center;
+    align-content: center; */
+    place-content: center;
 
     /* grid-template-rows: repeat(4 ,1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr; */
