@@ -21,5 +21,6 @@
     /* width: 100px;
     height: 60px; */
     background-color: greenyellow;
+    border: 2px solid red;
     text-align: center;
 }
