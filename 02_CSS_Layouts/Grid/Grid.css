@@ -23,3 +23,7 @@
     border: 2px solid black;
     text-align: center;
 }
+.one{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
