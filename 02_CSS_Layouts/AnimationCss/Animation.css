@@ -2,6 +2,7 @@
   width: 300px;
   height: 100px;
   text-align: center;
+  margin-bottom: 10px;
   background-color: pink;
 
   animation-name: animation;
@@ -10,6 +11,14 @@
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+.box2 {
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  background-color: pink;
+
+  animation: animation2 3s ease-in 0s infinite alternate;
 }
 
 @keyframes animation {
@@ -21,6 +30,23 @@
   to {
     width: 450px;
     background-color: palevioletred;
+    font-size: 80px;
+    border-radius: 15px;
+  }
+}
+
+@keyframes animation2 {
+  0% {
+    width: 10px;
+    background-color: pink;
+    font-size: 0px;
+  }
+  50%{
+    background-color: palevioletred;
+  }
+  100% {
+    width: 450px;
+    background-color: red;
     font-size: 80px;
     border-radius: 15px;
   }
