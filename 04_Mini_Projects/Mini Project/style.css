@@ -66,9 +66,16 @@
     padding-right: 8px;
 }
 .sidebar_menu .social_media{
+
+    position: absolute;
+    left: 25%;
+    bottom: 50px;
+}
+.sidebar_menu .social_media i{
     color: white;
     opacity: 0.5;
-    position: absolute;
-    left: 25px;
-    bottom: 20px;
+    padding: 0 5px;
+}
+#check{
+    display: none;
 }
