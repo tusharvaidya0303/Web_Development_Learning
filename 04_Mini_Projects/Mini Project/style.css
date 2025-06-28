@@ -67,5 +67,8 @@
 }
 .sidebar_menu .social_media{
     color: white;
-    
+    opacity: 0.5;
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
 }
