@@ -4,23 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    />
     <title>Bootstrap</title>
   </head>
   <body>
     <div class="container">
-        <h2>Demo Form Bootstrap</h2>
-        <form action="#">
+      <h2>Demo Form Bootstrap</h2>
+      <form action="#">
+        <div class="mb-3">
             <label class="form-control" for="email">E-Mail : </label>
-          <input
-            type="email"
-            class="form-control"
-            placeholder="E-mail"
-            id="email"
-          />
-        </form>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="E-mail"
+              id="email"
+            />
+        </div>
+        <div class="mb-3">
+            <label class="form-control" for="password">Password : </label>
+            <input
+              type="Password"
+              class="form-control"
+              placeholder="Password"
+              id="password"
+            />
+        </div>
+        <div class="mb-3">
+            <label class="form-control" for="text">Address : </label>
+            <input
+              type="text"
+              class="form-control-lg"
+              placeholder="Address"
+              id="text"
+            />
+        </div>
+        <div class="mb-3">
+            <select name="form-select">
+                <option value="Selector">Select city</option>
+                <option value="1">Delhi</option>
+                <option value="2">Mumbai</option>
+                <option value="2">Pune</option>
+            </select>
+        </div>
+        <div class="normal mb-3">
+            <input type="checkbox" id="agree">
+            <label for="aggree">Agree</label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" id="agree" class="form-check-input">
+            <label for="aggree" class="form-check-lable">Agree</label>
+        </div>
+      </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
