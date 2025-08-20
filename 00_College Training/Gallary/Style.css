@@ -1,0 +1,86 @@
+body{
+    margin: 10px;
+    font-family: sans-serif;
+}
+.nevbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.logo{
+    color: orangered;
+    font-weight: bold;
+    font-size: 30px;
+}
+.navlink{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 180px;
+}
+.navlink a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn{
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.btn:hover{
+    background-color: brown;
+}
+.navlink a:hover{
+    color: red;
+}
+#container{
+    margin-top: 10px;
+    border: 2px solid;
+    height: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.box{
+    overflow: hidden;
+    position: relative;
+
+}
+.box img{
+    width: 100%;        /* make image fit the width */
+    height: 100%;       /* fill the grid cell */
+    object-fit: cover;  /* keeps aspect ratio but crops if needed */
+    display: block;
+    transition: 0.3s ease;
+}
+.text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;                /* hidden */
+    transition: opacity 0.3s ease;
+}
+.box:hover img{
+    transform: scale(1.05);
+}
+.box:hover .text{
+    opacity: 1;
+}
