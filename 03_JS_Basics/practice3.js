@@ -30,5 +30,12 @@
 // console.log(`The Sum is ${sum}`)
 
 // Qs4.Print the factorial of a numbern.
+let num = 5;
+let factorial = 1;
+
+for(i=1;i<=num;i++){
+    factorial *= i;
+}
+console.log(`Factorial of ${num} is ${factorial}`)
 
 // Qs5. Find the largest number in an array with only positive numbers.
