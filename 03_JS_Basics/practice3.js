@@ -20,6 +20,14 @@
 // console.log(count);
 
 // Qs3.Write a JS program to find the sum of digits in a number. Example: if number=287152, sum=25.
+// let num = 287153;
+// let sum =0;
+// while(num>0){
+//     let digit = num%10;
+//     sum += digit;
+//     num = Math.floor(num/10);
+// }
+// console.log(`The Sum is ${sum}`)
 
 // Qs4.Print the factorial of a numbern.
 
