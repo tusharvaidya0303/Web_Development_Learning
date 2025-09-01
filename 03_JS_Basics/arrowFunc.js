@@ -6,5 +6,7 @@ console.log(sum(1,2));
 const cube = (n) => {
     console.log(n*n*n);
 }
- cube(3)
+ cube(3) 
+
+ 
 
