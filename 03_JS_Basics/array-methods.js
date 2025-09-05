@@ -55,7 +55,20 @@
 // })
 // console.log(newArr);
 
+//4) Reduce
+// let sum = arr.reduce( (a, b, c, d )=>{
+//   return a+b;
+// })
+// console.log(sum);
 
+// Practice return sum of all even and greater than 2
+// let arr =[1,2,3,4,5,64,3,5,2,5,2,34];
+// let num = arr.map((a,b,c)=>{
+//   if(a>2){
+//   return a;
+//   }
+// })
+// console.log(num);
 
 
 
