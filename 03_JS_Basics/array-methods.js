@@ -39,4 +39,14 @@
         
     // })
 
+// 2) map function
+// let marksYouDeserve = [7,8,9,6]
+// let marksYouGet = marksYouDeserve.map((elem)=>{
+//     return elem + 30
+// })
+// console.log(marksYouGet);
+// console.log(marksYouDeserve);
+
+
+
 
