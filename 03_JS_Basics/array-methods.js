@@ -32,6 +32,11 @@
 //     console.log(students.marks);
 // })
 
-
+    //using second argument for index number
+    // let players = ["messi","ronaldo","nemar"]
+    // players.forEach((item,index)=>{
+    //     console.log(`${item} at index ${index}`);
+        
+    // })
 
 
