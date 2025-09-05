@@ -12,5 +12,24 @@ let arr = [1,2,3,4,5]
 // })
 
 //forEach with object
+// let obj = [
+//     {
+//         name:"Tushar",
+//         marks:95,
+//     },
+//     {
+//         name:"Ketan",
+//         marks:96,
+//     },
+//     {
+//         name:"Nabeel",
+//         marks:93,
+//     }
+// ]
+// obj.forEach((students)=>{
+//     console.log(students);
+//     console.log(students.marks);
+    
+// })
 
 
