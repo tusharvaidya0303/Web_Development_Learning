@@ -18,7 +18,7 @@ h1.innerHTML="<u>DOM Practice</u>"
 document.querySelector("body").prepend(h1);
 
 let p = document.createElement("p");
-h1.innerHTML="Apna College <b>Delta</b> Practice"
+p.innerHTML="Apna College <b>Delta</b> Practice"
 
 document.querySelector("body").append(p);
 
