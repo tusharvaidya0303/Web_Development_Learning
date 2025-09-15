@@ -18,7 +18,7 @@ h1.innerHTML="<u>DOM Practice</u>"
 document.querySelector("body").prepend(h1);
 
 let p = document.createElement("p");
-h1.innerHTML="<u>DOM Practice</u>"
+h1.innerHTML="<u>Delta</u>"
 
 document.querySelector("body").prepend(h1);
 
