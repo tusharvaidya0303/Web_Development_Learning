@@ -17,3 +17,9 @@ h1.innerHTML="<u>DOM Practice</u>"
 
 document.querySelector("body").prepend(h1);
 
+let p = document.createElement("h1");
+h1.innerHTML="<u>DOM Practice</u>"
+
+document.querySelector("body").prepend(h1);
+
+
