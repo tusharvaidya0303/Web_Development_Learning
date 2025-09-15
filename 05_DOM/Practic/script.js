@@ -12,3 +12,8 @@ input.setAttribute("placeholder","Username")
 let btn = document.querySelector("#btn")
 btn.classList.add("btnStyle")
 
+let h1 = document.createElement("h1");
+h1.innerHTML="<u>DOM Practice</u>"
+
+document.querySelector("body").prepend(h1);
+
