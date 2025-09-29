@@ -4,10 +4,16 @@
 //     console.log(`Hello ${i}`);
 // }
 
-console.log(process.argv);
+// console.log(process.argv);
 
-let arg = process.argv[2];
+// let arg = process.argv[2];
 
-for(let i= 2; i<= arg; i++){
-    console.log(`Hello ${i}`);
-}
+// for(let i= 2; i<= arg; i++){
+//     console.log(`Hello ${i}`);
+// }
+
+const math = require('./math');
+
+console.log(math.sum(5,3));
+console.log(math.multiply(5,3));
+console.log(math.pi);
