@@ -36,5 +36,17 @@ app.listen(port, () => {
 
 app.get("/:user/:id", (req, res) => {
   let { user, id } = req.params;
-  res.send(`Hello ${user}, your ID is ${id}`);
+  let htmlstr = `<h1>Hello ${user}, your ID is ${id}</h1>`;
+  res.send(htmlstr);
+  console.log(req.params);
+});
+
+app.get("/search", (req, res) => {
+  console.log(req.query);
+  let { q } = req.query;
+  if (!q) {
+    res.send("No query searched");
+    return;
+  }
+  res.send(`Query result for : ${q}`);
 });
