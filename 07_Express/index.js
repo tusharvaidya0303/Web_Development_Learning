@@ -17,5 +17,14 @@ app.listen(port, () => {
 // });
 
 app.get('/', (req, res) => {
-  res.send('');
+  res.send('you have reached the home page');
+});
+app.get('/apple', (req, res) => {
+  res.send('you have reached the apple page');
+});
+app.get('/orange', (req, res) => {
+  res.send('you have reached the orange page');
+});
+app.get('*', (req, res) => {
+  res.send('404 Page Not Found');
 });
