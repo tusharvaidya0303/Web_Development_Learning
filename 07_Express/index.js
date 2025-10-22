@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-console.dir(app);
+// console.dir(app);
 
 let port = 8080;
 app.listen(port, () => {
@@ -35,6 +35,6 @@ app.listen(port, () => {
 // });
 
 app.get("/:user/:id", (req, res) => {
-  console.log(req.params);
-  res.send(`Hello i am root`);
+  let { user, id } = req.params;
+  res.send(`Hello ${user}, your ID is ${id}`);
 });
