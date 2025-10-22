@@ -25,6 +25,7 @@ app.get('/apple', (req, res) => {
 app.get('/orange', (req, res) => {
   res.send('you have reached the orange page');
 });
+
 // app.get("*", (req, res) => {
 //   res.send('404 Page Not Found');
 // });
