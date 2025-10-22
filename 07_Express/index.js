@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-console.dir(app)
+console.dir(app);
 
 let port = 8080;
 app.listen(port, () => {
@@ -16,21 +16,25 @@ app.listen(port, () => {
 //   });
 // });
 
-app.get('/', (req, res) => {
-  res.send('you have reached the home page');
-});
-app.get('/apple', (req, res) => {
-  res.send('you have reached the apple page');
-});
-app.get('/orange', (req, res) => {
-  res.send('you have reached the orange page');
-});
+// app.get('/', (req, res) => {
+//   res.send('you have reached the home page');
+// });
+// app.get('/apple', (req, res) => {
+//   res.send('you have reached the apple page');
+// });
+// app.get('/orange', (req, res) => {
+//   res.send('you have reached the orange page');
+// });
 
 // app.get("*", (req, res) => {
 //   res.send('404 Page Not Found');
 // });
 
+// app.post('/', (req, res) => {
+//   res.send('you have reached the home page with a POST request');
+// });
 
-app.post('/', (req, res) => {
-  res.send('you have reached the home page with a POST request');
+app.get("/:user/:id", (req, res) => {
+  console.log(req.params);
+  res.send(`Hello i am root`);
 });
