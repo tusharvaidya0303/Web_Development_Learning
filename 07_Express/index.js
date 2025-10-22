@@ -28,3 +28,7 @@ app.get('/orange', (req, res) => {
 app.get('*', (req, res) => {
   res.send('404 Page Not Found');
 });
+
+app.post('/', (req, res) => {
+  res.send('you have reached the home page with a POST request');
+});
