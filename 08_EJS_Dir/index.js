@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
 app.get('/hello', (req, res) => {
     res.send('Hello.');
 });
+
+app.get('/rolldice', (req, res) => {
+    let diceVal = Math.floor(Math.random() * 6) + 1;
+    res.render('rolldice.ejs', { num: diceVal });
+});
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
