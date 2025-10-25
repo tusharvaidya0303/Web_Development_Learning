@@ -19,6 +19,11 @@ app.get('/rolldice', (req, res) => {
     res.render('rolldice.ejs', { diceVal });
 });
 
+app.get('/instagram/:username', (req, res) => {
+    const { username } = req.params;
+    res.render('instagram.ejs', { username });
+});
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
