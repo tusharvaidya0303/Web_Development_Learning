@@ -19,10 +19,19 @@ app.get('/rolldice', (req, res) => {
     res.render('rolldice.ejs', { diceVal });
 });
 
-app.get('/instagram/:username', (req, res) => {
-    const followers = ["Adam", "Eve", "Charlie", "Dave", "Mallory"];
+// app.get('/instagram/:username', (req, res) => {
+//     const followers = ["Adam", "Eve", "Charlie", "Dave", "Mallory"];
+//     const { username } = req.params;
+//     res.render('instagram.ejs', { username, followers });
+// });
+
+app.get('/ig/:username', (req, res) => {
     const { username } = req.params;
-    res.render('instagram.ejs', { username, followers });
+    const instaData = require('./data.json');
+    const data = instaData[username];
+    console.log(data);
+    
+    res.render('instagram.ejs', { data });
 });
 
 app.listen(port, () => {
