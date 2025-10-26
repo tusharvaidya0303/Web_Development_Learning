@@ -1,0 +1,15 @@
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        body {
+            background-color: papayawhip;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
