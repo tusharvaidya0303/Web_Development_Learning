@@ -1,9 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
 h1{
     color: maroon;
+    text-align: center;
 }
 .posts{
     background-color: blanchedalmond;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 .user{
     font-style: italic;
+    color: gray;
 }
+
+.content{
+    font-size: 18px;
+    margin: 10px 0;
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
