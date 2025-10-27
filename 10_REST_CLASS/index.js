@@ -4,7 +4,7 @@ const app = express();
 const port = 8080;
 const path = require("path");
 
-import { v4 as uuidv4 } from 'uuid';
+const { v4: uuidv4 } = require("uuid");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -32,27 +32,46 @@ let posts = [
   },
 ];
 
-app.get("/posts", (req, res) => {                  // /posts route to get all posts 
+app.get("/posts", (req, res) => {
+  // /posts route to get all posts
   res.render("index.ejs", { posts });
 });
 
-app.get("/posts/new", (req, res) => {                 // /posts/new route to create a new post
+app.get("/posts/new", (req, res) => {
+  // /posts/new route to create a new post
 
   res.render("new.ejs");
 });
-app.post("/posts", (req, res) => {                // /posts route to handle new post submission
+app.post("/posts", (req, res) => {
+  // /posts route to handle new post submission
   const { username, content } = req.body;
-  posts.push({ username, content });
+  let id = uuidv4();
+  posts.push({ id, username, content });
   res.redirect("/posts");
 });
 
-app.get("/posts/:id", (req, res) => {              // /posts/:id route to get a specific post by ID
-    let { id } = req.params;
+app.get("/posts/:id", (req, res) => {
+  // /posts/:id route to get a specific post by ID
+  let { id } = req.params;
   let post = posts.find((p) => id === p.id);
   console.log(post);
-  
+
   if (post) {
     res.render("show.ejs", { post });
+  } else {
+    res.status(404).send("Post not found");
+  }
+});
+
+app.patch("/posts/:id", (req, res) => {
+  // /posts/:id route to update a specific post by ID
+  let { id } = req.params;
+  let { content } = req.body;
+  let post = posts.find((p) => id === p.id);
+
+  if (post) {
+    post.content = content;
+    res.redirect(`/posts/${id}`);
   } else {
     res.status(404).send("Post not found");
   }
@@ -61,4 +80,3 @@ app.get("/posts/:id", (req, res) => {              // /posts/:id route to get a 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
