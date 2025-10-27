@@ -58,12 +58,7 @@ app.get("/posts/:id", (req, res) => {
   let { id } = req.params;
   let post = posts.find((p) => id === p.id);
   console.log(post);
-
-  if (post) {
     res.render("show.ejs", { post });
-  } else {
-    res.status(404).send("Post not found");
-  }
 });
 
 app.patch("/posts/:id", (req, res) => {
@@ -74,22 +69,23 @@ app.patch("/posts/:id", (req, res) => {
 
   if (post) {
     post.content = newContent;
-    res.redirect(`/posts/${id}`);
+    res.redirect("/posts");
   } else {
     res.status(404).send("Post not found");
   }
-  res.send("Update post");
 });
 app.get("/posts/:id/edit", (req, res) => {
-  // /posts/:id/edit route to render edit form for a specific post by ID
   let { id } = req.params;
   let post = posts.find((p) => id === p.id);
+  res.render("edit.ejs", { post });
 
-  if (post) {
-    res.render("edit.ejs", { post });
-  } else {
-    res.status(404).send("Post not found");
-  }
+});
+
+app.delete("/posts/:id", (req, res) => {
+  // /posts/:id route to delete a specific post by ID
+  let { id } = req.params;
+   posts = posts.filter((p) => p.id !== id);
+  res.redirect("/posts");
 });
 
 app.listen(port, () => {
