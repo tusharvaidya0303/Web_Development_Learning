@@ -66,12 +66,24 @@ app.get("/posts/:id", (req, res) => {
 app.patch("/posts/:id", (req, res) => {
   // /posts/:id route to update a specific post by ID
   let { id } = req.params;
-  let { content } = req.body;
+  let newContent = req.body.content;
   let post = posts.find((p) => id === p.id);
 
   if (post) {
-    post.content = content;
+    post.content = newContent;
     res.redirect(`/posts/${id}`);
+  } else {
+    res.status(404).send("Post not found");
+  }
+  res.send("Update post");
+});
+app.get("/posts/:id/edit", (req, res) => {
+  // /posts/:id/edit route to render edit form for a specific post by ID
+  let { id } = req.params;
+  let post = posts.find((p) => id === p.id);
+
+  if (post) {
+    res.render("edit.ejs", { post });
   } else {
     res.status(404).send("Post not found");
   }
