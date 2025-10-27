@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Quora</title>
 </head>
 <body>
     <h1>Welcome to Quora</h1>
     <div id="posts">
         <% for(let post of posts) { %>
-            <div class="post">
-                <h2>@<%= post.username %></h2>
-                <p><%= post.content %></p>
+            <div class="posts">
+                <h3 class="user">@<%= post.username %></h3>
+                <p class="content"><%= post.content %></p>
             </div>
         <% } %>
     </div>
