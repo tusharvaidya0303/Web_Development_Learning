@@ -7,9 +7,17 @@ const mysql = require("mysql2");
 const connection = await mysql.createConnection({
   host: "localhost",
   user: "root",
-  database: "test",
+  database: "Delta_app",
   password: "Tushar@123",
 });
+try {
+  connection.query("Show tables", (error, results) => {
+    if (error) throw error;
+    console.log(results);
+  });
+} catch (error) {
+  console.error("Error occurred:", error);
+}
 
 let getRandomUser = () => {
   return {
