@@ -13,11 +13,14 @@ const connection = mysql.createConnection({
 
 //Inserting new data into the table
 let query =
-  "INSERT INTO users (Id, username, email, password) VALUES (?, ?, ?, ?) ";
-let user = ["123", "123_newuser", "abc@gmail.com", "abc"];
+  "INSERT INTO users (Id, username, email, password) VALUES ?"; // for multiple data insertion
+let users = [
+  ["123B", "123_newuserB", "abc@gmail.com", "abcB"],
+  ["123C", "123_newuserC", "abc@gmail.com", "abcC"],
+];
 
 try {
-  connection.query(query, user, (error, results) => {
+  connection.query(query, users, (error, results) => {
     if (error) throw error;
     console.log(results);
   });
