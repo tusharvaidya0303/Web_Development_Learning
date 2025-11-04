@@ -11,16 +11,26 @@ const connection = mysql.createConnection({
   password: "Tushar@123",
 });
 
+let getRandomUser = () => {
+  return [
+    faker.datatype.uuid(),
+    faker.internet.username(),
+    faker.internet.email(),
+    faker.internet.password(),
+  ];
+};
+
 //Inserting new data into the table
-let query =
-  "INSERT INTO users (Id, username, email, password) VALUES ?"; // for multiple data insertion
-let users = [
-  ["123B", "123_newuserB", "abc@gmail.com", "abcB"],
-  ["123C", "123_newuserC", "abc@gmail.com", "abcC"],
-];
+let query = "INSERT INTO users (Id, username, email, password) VALUES ?"; // for multiple data insertion
+
+let data = [];
+
+for (let i = 0; i <= 100; i++) {
+  data.push(getRandomUser());
+}
 
 try {
-  connection.query(query, users, (error, results) => {
+  connection.query(query, [data], (error, results) => {
     if (error) throw error;
     console.log(results);
   });
@@ -30,11 +40,4 @@ try {
 
 connection.end();
 
-let getRandomUser = () => {
-  return {
-    Id: faker.string.uuid(),
-    username: faker.internet.username(),
-    email: faker.internet.email(),
-    password: faker.internet.password(),
-  };
-};
+
