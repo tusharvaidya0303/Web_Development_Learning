@@ -31,8 +31,8 @@ app.get("/", (req, res) => {
   try {
   connection.query(q, (error, results) => {
     if (error) throw error;
-    console.log(results[0]['count(*)']); // Accessing the count value
-    res.render("home.ejs", { totalUsers: results[0]['count(*)'] });
+    let count = results[0]['count(*)']; // Accessing the count value
+    res.render("home.ejs", { count });
   });
 } catch (error) {
   console.log("Error occurred:", error);
