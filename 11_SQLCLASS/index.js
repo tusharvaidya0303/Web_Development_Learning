@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
 
 let getRandomUser = () => {
   return [
-    faker.datatype.uuid(),
+    faker.string.uuid(),
     faker.internet.username(),
     faker.internet.email(),
     faker.internet.password(),
@@ -39,5 +39,3 @@ try {
 }
 
 connection.end();
-
-
