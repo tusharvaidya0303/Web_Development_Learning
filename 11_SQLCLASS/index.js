@@ -41,13 +41,12 @@ app.get("/", (req, res) => {
 });
 
 //Show Routes
-app.get("/user", (req, res) => {
+app.get("/users", (req, res) => {
   let q = `SELECT * FROM users`;
   try {
-  connection.query(q, (error, results) => {
+  connection.query(q, (error, users) => {
     if (error) throw error;
-    console.log(results);
-    res.send(results);
+    res.render("showusers.ejs", { users });
   });
 } catch (error) {
   console.log("Error occurred:", error);
