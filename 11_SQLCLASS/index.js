@@ -11,15 +11,15 @@ const connection = mysql.createConnection({
   password: "Tushar@123",
 });
 
-let query = "SHOW TABLES";
+//Inserting new data into the table
+let query =
+  "INSERT INTO users (Id, username, email, password) VALUES (?, ?, ?, ?) ";
+let user = ["123", "123_newuser", "abc@gmail.com", "abc"];
 
 try {
-  connection.query(query, (error, results) => {
+  connection.query(query, user, (error, results) => {
     if (error) throw error;
     console.log(results);
-    console.log(results.length);
-    console.log(results[0]);
-    console.log(results[1]);
   });
 } catch (error) {
   console.log("Error occurred:", error);
