@@ -4,6 +4,10 @@ const { faker } = require("@faker-js/faker");
 const mysql = require("mysql2");
 const express = require("express");
 const app = express();
+const path = require("path");
+
+app.set("view engine", "ejs");
+app.set("views",path.join(__dirname, "/views"));
 
 // Create the connection to database
 const connection = mysql.createConnection({
@@ -28,7 +32,7 @@ app.get("/", (req, res) => {
   connection.query(q, (error, results) => {
     if (error) throw error;
     console.log(results[0]['count(*)']); // Accessing the count value
-    res.send("Success");
+    res.render("home.ejs", { totalUsers: results[0]['count(*)'] });
   });
 } catch (error) {
   console.log("Error occurred:", error);
