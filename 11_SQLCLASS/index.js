@@ -40,25 +40,23 @@ app.get("/", (req, res) => {
 }
 });
 
+//Show Routes
+app.get("/user", (req, res) => {
+  let q = `SELECT * FROM users`;
+  try {
+  connection.query(q, (error, results) => {
+    if (error) throw error;
+    console.log(results);
+    res.send(results);
+  });
+} catch (error) {
+  console.log("Error occurred:", error);
+  res.send("An error occurred in DB");
+}
+});
+
 app.listen(8080, () => {
   console.log("Server is running on port 8080");
 });
 
 
-
-// //Inserting new data into the table
-// let query = "INSERT INTO users (Id, username, email, password) VALUES ?"; // for multiple data insertion
-// let data = [];
-// for (let i = 0; i <= 100; i++) {
-//   data.push(getRandomUser());
-// }
-
-// try {
-//   connection.query(query, [data], (error, results) => {
-//     if (error) throw error;
-//     console.log(results);
-//   });
-// } catch (error) {
-//   console.log("Error occurred:", error);
-// }
-// connection.end(); // close the database connection
