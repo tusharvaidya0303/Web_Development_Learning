@@ -1,5 +1,5 @@
 // CJS
-const { faker } = require("@faker-js/faker");
+const { faker, el } = require("@faker-js/faker");
 // Get the client
 const mysql = require("mysql2");
 const express = require("express");
@@ -74,7 +74,27 @@ app.get("/user/:id/edit", (req, res) => {
 });
 //Update Routes in database
 app.patch("/user/:id", (req, res) => {
-  res.send("Updated");
+  let { id } = req.params;
+  let {password: formPass, username: newUsername} = req.body;
+  let q = `SELECT * FROM users WHERE id = '${id}'`;
+  try {
+    connection.query(q, (error, result) => {
+      if (error) throw error;
+      let users = result[0];
+      if (users.password != formPass) {
+        res.send("Password incorrect, cannot update username");
+      }else{
+        let q2 = `UPDATE users SET username = '${newUsername}' WHERE id = '${id}'`;
+        connection.query(q2, (error, result) => {
+          if (error) throw error;
+          res.redirect("/users");
+        });
+      }
+    });
+  } catch (error) {
+    console.log("Error occurred:", error);
+    res.send("An error occurred in DB");
+  }
 });
 app.listen(8080, () => {
   console.log("Server is running on port 8080");
