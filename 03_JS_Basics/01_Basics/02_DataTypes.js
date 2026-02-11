@@ -10,6 +10,7 @@
 // 1. Primitive Types: string, number, boolean, null, undefined, symbol (ES6+), Bigint (ES2020+)
 // 2. Non-primitive Objects types(reference): object (including arrays and functions)
 // JavaScript also has a special value called NaN (Not a Number) which is of type number but represents an invalid number.
+// primitive datatypes are stored in S
 
 // Example of primitive types
 
