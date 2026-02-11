@@ -12,8 +12,6 @@
 // JavaScript also has a special value called NaN (Not a Number) which is of type number but represents an invalid number.
 // primitive datatypes are stored in S
 
-// Example of primitive types
-
 let name = "John"; // string
 console.log(typeof(name));// string
 
