@@ -26,6 +26,30 @@ console.log(myString2.toUpperCase()); // Output: HELLO, WORLD!
 console.log(myString2.toLowerCase()); // Output: hello, world!
 console.log(myString2.__proto__);// Output: String {length: 0, constructor: ƒ, charAt: ƒ, charCodeAt: ƒ, concat: ƒ, …}
 
+const newString = myString2.substring(0, 5); // Output: Hello
+console.log(newString);
+
+const newString2 = myString2.slice(0, 5); // Output: Hello
+console.log(newString2);
+const newString3 = myString2.slice(-6, myString2.length); // Output: World! 
+console.log(newString3);
+//if a negative index is used, it counts from the end of the string. So,
+// -6 means 6 characters from the end of the string, which is the start of "World!".
+
+const newString4 = "    hello     ";
+console.log(newString4);           // Output: "    hello     "
+console.log(newString4.trim()); // Output: hello
+// The trim() method removes whitespace from both ends of a string. 
+// It does not affect the original string, but returns a new string with the whitespace removed.
+
+const url = "https://www.tushar%20vaidya.com";
+console.log(url.replace("%20", "-")); // Output: https://www.tushar-vaidya.com
+// The replace() method searches a string for a specified value,
+// and returns a new string where the specified values are replaced.
+console.log(url.includes("tushar")); // Output: true
+console.log(url.includes("something")); // Output: false
+// The includes() method determines whether a string contains a specified substring, and returns true or false as appropriate.
+
 
 
 
