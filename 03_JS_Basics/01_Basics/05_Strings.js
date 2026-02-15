@@ -21,9 +21,11 @@ let myString2 = new String("Hello, World!");
 console.log(myString2[2]); // Output: l
 console.log(myString2.length); // Output: 13
 console.log(myString2.charAt(0)); // Output: H
-console.log(myString2.indexOf(e)); // Output: 1
+console.log(myString2.indexOf("e")); // Output: 1
 console.log(myString2.toUpperCase()); // Output: HELLO, WORLD!
 console.log(myString2.toLowerCase()); // Output: hello, world!
+console.log(myString2.__proto__);// Output: String {length: 0, constructor: ƒ, charAt: ƒ, charCodeAt: ƒ, concat: ƒ, …}
+
 
 
 
