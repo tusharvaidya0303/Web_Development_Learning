@@ -50,6 +50,9 @@ console.log(url.includes("tushar")); // Output: true
 console.log(url.includes("something")); // Output: false
 // The includes() method determines whether a string contains a specified substring, and returns true or false as appropriate.
 
-
+const sentence = "The quick brown fox jumps over the lazy dog.";
+console.log(sentence.split(" ")); // Output: ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog."]
+// The split() method divides a String into an ordered list of substrings,
+// puts these substrings into an array, and returns the array.
 
 
