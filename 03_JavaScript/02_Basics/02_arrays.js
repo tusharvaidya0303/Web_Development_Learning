@@ -51,3 +51,4 @@ console.log(Array.of(score1,score2,score3)); // Output: [200, 300, 400]
 //  create arrays from various types of iterable objects.
 
 
+
