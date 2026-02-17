@@ -35,3 +35,13 @@ console.log(User);
 Object.freeze(User); // Freezing the User object to prevent further modifications
 User.name = "New Name"; // Attempting to modify a property of the frozen User object (will not work)
 console.log(User.name); // Output: Tushar (the name property remains unchanged due to Object.freeze())
+
+const obj = {
+    function: function() {
+        console.log("This is a function property");
+    }
+};
+
+obj.function(); // Output: This is a function property
+// In JavaScript, objects can also have function properties, which are commonly referred to as methods. 
+// These methods can be invoked to perform specific actions or computations related to the object.
