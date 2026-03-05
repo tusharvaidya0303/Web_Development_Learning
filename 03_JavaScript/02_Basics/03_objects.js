@@ -8,7 +8,7 @@ let symbol = Symbol("id"); // Creating a unique symbol
 
 const User = {
     name: "Tushar",
-    'Full Name': "Tushar Vaidya", // Property name with space, must be accessed using bracket notation
+    'Full Name': "Tushar Vaidya", // Property name with space, must be accessed using bracket notation or quotes.
     age: 25,
     email: "tushar@example.com",
     isAdmin: true,
@@ -17,7 +17,7 @@ const User = {
 
 //Accessing object properties
 console.log(User.name); // Output: Tushar
-console.log(User['age']); // Output: 25
+console.log(User.age); // Output: 25
 console.log(User['Full Name']); // Output: Tushar Vaidya
 
 console.log(User[symbol]); // Output: unique_id

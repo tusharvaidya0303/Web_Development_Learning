@@ -48,3 +48,16 @@ console.log(mergedObjassign); // Output: { '1': 'one', '2': 'two', '3': 'three',
 const mergedObjSpread = {...obj1, ...obj2, ...obj3}; // Merging objects using the spread operator
 console.log(mergedObjSpread); // Output: { '1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five' }
 // The spread operator (...) is a more concise and modern way to merge objects.
+
+//------------------------------------Deconstructuring Objects------------------------------------
+const user = {
+    'Full name': "Tushar Vaidya",
+    age: 25,
+    email: "tushar@example.com"
+};
+
+// Destructuring the user object
+const { 'Full name': name, age, email } = user;
+console.log(name); // Output: Tushar Vaidya
+console.log(age); // Output: 25
+console.log(email); // Output: tushar@example.com

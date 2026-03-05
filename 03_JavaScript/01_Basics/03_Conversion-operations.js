@@ -18,7 +18,7 @@ let booleanIsLoggedIn = Boolean(isLoggedIn);
 console.log(booleanIsLoggedIn); // true
 console.log(typeof booleanIsLoggedIn); // boolean
 
-// when we want to convert a number to string, we can use toString() method
+// when we want to convert a number to boolean, we can use Boolean() method
 // 1 => true
 // 0 => false
 // "" => false

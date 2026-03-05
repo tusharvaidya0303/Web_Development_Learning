@@ -16,7 +16,7 @@ let fullName2 = firstName.concat(" ", lastName); // Output: John Doe
 console.log(fullName2);
 
 //another way to create strings is by using the String constructor.
-let myString2 = new String("Hello, World!");
+let myString2 = new String("Hello World!");
 
 console.log(myString2[2]); // Output: l
 console.log(myString2.length); // Output: 13
@@ -29,7 +29,7 @@ console.log(myString2.__proto__);// Output: String {length: 0, constructor: ƒ, 
 const newString = myString2.substring(0, 5); // Output: Hello
 console.log(newString);
 
-const newString2 = myString2.slice(0, 5); // Output: Hello
+const newString2 = myString2.slice(5,0); // Output: Hello if start > end, it will swap the values from 5,0 to 0,5 and return the string from start to end.
 console.log(newString2);
 const newString3 = myString2.slice(-6, myString2.length); // Output: World! 
 console.log(newString3);
