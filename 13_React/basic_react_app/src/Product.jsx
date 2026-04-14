@@ -7,6 +7,8 @@ function Product({title, price, features}) {
       <h2>{title}</h2>
       <p>price : {price}</p>
       <p>{features.map((feature) => <li>{feature}</li>)}</p>
+      {price >=10000 && <p>5% discount</p>}
+      {/* //{price >=10000 ? <p>5% discount</p> : null} */}
     </div>
   );
 }
