@@ -1,6 +1,6 @@
 import "./App.css";
 import Title from "./title.jsx";
-import Product from "./product.jsx";
+import Product from "./Product.jsx";
 import ProductTab from "./ProductTab.jsx";
 
 function Description() {
