@@ -1,6 +1,7 @@
 import "./App.css";
 import Title from "./title.jsx";
-import Product from "./Product.jsx";
+// import Product from "./Product.jsx";
+
 import ProductTab from "./ProductTab.jsx";
 
 function Description() {
@@ -34,6 +35,10 @@ function App() {
     //   <Description />
     //   <Description />
     // </>
+
+    //Amazone cards
+    
+
   );
 }
 
