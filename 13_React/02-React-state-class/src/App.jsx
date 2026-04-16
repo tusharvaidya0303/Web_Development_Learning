@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Counter from './counter'
+import LikeButton from './likeButton'
 
 function App() {
 
@@ -8,6 +9,8 @@ function App() {
     <>
      <h1>States in React</h1>
      <Counter />
+     <br />
+     <LikeButton />
     </>
   )
 }
