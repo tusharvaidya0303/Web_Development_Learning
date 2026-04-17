@@ -1,0 +1,66 @@
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px auto;
+  display: block;
+  font-size: 16px;
+  width: 400px;
+
+  color: white;                 /* 👈 text visible on black */
+  background-color: black;      /* 👈 black background */
+
+  border: 2px solid transparent;
+  background-image: linear-gradient(black, black),
+                    linear-gradient(to right, transparent, #0072ff, transparent);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+input:focus {
+  outline: none;
+  background-image: linear-gradient(black, black),
+                    linear-gradient(to right, #00c6ff, #0072ff);
+}
+input:hover {
+  background-image: linear-gradient(black, black),
+                    linear-gradient(to right, #00c6ff, #0072ff);
+  box-shadow: 0 0 12px rgba(0, 114, 255, 0.5);
+}
+input::placeholder {
+  color: #aaa;
+}
+.add-btn {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  backdrop-filter: blur(10px);
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.add-btn:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 6px 15px rgba(0, 114, 255, 0.4);
+  transform: translateY(-2px);
+}
+.add-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 8px rgba(0, 114, 255, 0.3);
+}
+hr {
+  all: unset;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, #0072ff, transparent);
+  margin: 25px 0;
+}
