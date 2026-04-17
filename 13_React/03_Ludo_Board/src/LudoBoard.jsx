@@ -2,25 +2,25 @@ import { useState } from "react";
 export default function LudoBoard() {
   let [moves, setMoves] = useState({ blue: 0, yellow: 0, green: 0, red: 0 });
   let updateBlue = () => {
-    console.log(`moves.blue = ${moves.blue}`);
+    // console.log(`moves.blue = ${moves.blue}`);
     setMoves((prevMoves)=>{
       return { ...prevMoves, blue: prevMoves.blue + 1 };
     });
   }
   let updateYellow = () => {
-    console.log(`moves.yellow = ${moves.yellow}`);
+    // console.log(`moves.yellow = ${moves.yellow}`);
     setMoves((prevMoves)=>{
       return { ...prevMoves, yellow: prevMoves.yellow + 1 };
     });
   }
   let updateGreen = () => {
-    console.log(`moves.green = ${moves.green}`);
+    // console.log(`moves.green = ${moves.green}`);
       setMoves((prevMoves)=>{
       return { ...prevMoves, green: prevMoves.green + 1 };
     });
   }
   let updateRed = () => {
-    console.log(`moves.red = ${moves.red}`);
+    // console.log(`moves.red = ${moves.red}`);
       setMoves((prevMoves)=>{
       return { ...prevMoves, red: prevMoves.red + 1 };
     });
