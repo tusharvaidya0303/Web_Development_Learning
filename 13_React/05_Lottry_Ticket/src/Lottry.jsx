@@ -3,13 +3,13 @@ import "./Lottry.css";
 import {genNumbers,sum} from "./helper";
 import Ticket from "./Ticket";
 
-export default function Lottry({n,winningsum}) {
+export default function Lottry({n,winCondition}) {
   let [ticket, setTicket] = useState(genNumbers(n));
 
   let buyTicket = () => {
   setTicket(genNumbers(n));
   };
-  let isWinning = sum(ticket) === winningsum;
+  let isWinning = winCondition(ticket);
 
   return (
     <div >
