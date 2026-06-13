@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvertica neue;
+}
+.parent {
+  min-height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  height: 330px;
+  width: 280px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #dadada;
+  padding: 2px;
+}
+.save-btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dadada;
+  padding: 4px 8px;
+  font-size: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  gap: 3px;
+  background-color: transparent;
+  color: #b1b1b1;
+}
+.center h3 {
+  font-size: 17px;
+  font-weight: 400;
+}
+.center h3 span {
+  font-size: 9px;
+  font-weight: 500;
+  color: #8b8b8b;
+}
+.center .tag {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+.center .tag h4 {
+  font-size: 10px;
+  background-color: #dadada;
+  color: black;
+  padding: 4px 8px;
+  font-weight: 400;
+  border-radius: 3px;
+}
+.center h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1.5px solid #d7d7d7ce;
+  padding-top: 15px;
+}
+.footer button {
+  background-color: #111;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+}
+.footer h3 {
+  font-size: 17px;
+}
+.footer p {
+  font-size: 10px;
+  color: #8b8b8b;
+}
